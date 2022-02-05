@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "tb_sellers")
 public class Seller {
@@ -23,12 +22,11 @@ public class Seller {
 	@OneToMany(mappedBy = "seller")
 	private List<Sale> sales = new ArrayList<>();
 	
-	public Seller() {
+	public Seller () {
 		
 	}
 
 	public Seller(Long id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -52,5 +50,7 @@ public class Seller {
 	public List<Sale> getSales() {
 		return sales;
 	}
-						
+	
+
+	
 }
